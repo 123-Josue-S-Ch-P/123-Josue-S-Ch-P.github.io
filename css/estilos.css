@@ -5,7 +5,7 @@
   box-sizing: border-box;
 }
 
-/* Fondo con gradiente futurista */
+/* Fondo con gradiente futurista + estrellas */
 body {
   background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
   background-size: 400% 400%;
@@ -15,6 +15,8 @@ body {
   line-height: 1.6;
   padding: 0;
   min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
 }
 
 @keyframes gradientBG {
@@ -23,8 +25,8 @@ body {
   100% { background-position: 0% 50%; }
 }
 
-/* Grid sutil en fondo */
-body::before {
+/* Estrellas animadas */
+body::after {
   content: "";
   position: fixed;
   top: 0;
@@ -32,10 +34,23 @@ body::before {
   width: 100%;
   height: 100%;
   background-image:
-    linear-gradient(to right, rgba(255,255,255,0.05) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(255,255,255,0.05) 1px, transparent 1px);
-  background-size: 20px 20px;
+    radial-gradient(2px 2px at 20px 30px, #fff, transparent),
+    radial-gradient(2px 2px at 80px 70px, #00ffaa, transparent),
+    radial-gradient(1px 1px at 150px 120px, #aa00ff, transparent),
+    radial-gradient(1px 1px at 250px 200px, #fff, transparent),
+    radial-gradient(2px 2px at 320px 90px, #00ffaa, transparent),
+    radial-gradient(1px 1px at 400px 150px, #aa00ff, transparent),
+    radial-gradient(1px 1px at 500px 250px, #fff, transparent);
+  background-repeat: repeat;
+  background-size: 500px 500px;
+  opacity: 0.3;
   z-index: -1;
+  animation: twinkle 8s ease-in-out infinite alternate;
+}
+
+@keyframes twinkle {
+  0% { opacity: 0.1; }
+  100% { opacity: 0.4; }
 }
 
 /* Header */
@@ -64,19 +79,6 @@ nav ul {
   display: flex;
   list-style: none;
   gap: 20px;
-}
-
-@media (max-width: 768px) {
-  nav ul {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-  }
-
-  nav a {
-    padding: 8px 12px;
-    font-size: 0.9rem;
-  }
 }
 
 nav a {
@@ -123,30 +125,18 @@ nav a:hover {
   margin-bottom: 20px;
   color: #ffffff;
   text-shadow: 0 0 15px rgba(255,255,255,0.5);
-}
-
-@media (max-width: 768px) {
-  .hero-content h1 {
-    font-size: 2.2rem;
-    line-height: 1.2;
-  }
-
-  .hero-content p {
-    font-size: 1rem;
-    padding: 0 10px;
-  }
-
-  .btn {
-    width: 80%;
-    padding: 12px;
-    font-size: 1rem;
-  }
+  word-break: break-word;
+  overflow-wrap: break-word;
+  padding: 0 10px;
 }
 
 .hero-content p {
   font-size: 1.2rem;
   margin-bottom: 30px;
   max-width: 600px;
+  word-break: break-word;
+  overflow-wrap: break-word;
+  padding: 0 10px;
 }
 
 .btn {
@@ -172,7 +162,6 @@ nav a:hover {
   padding: 60px 5%;
   max-width: 1200px;
   margin: 0 auto;
-  /* ⚠️ Eliminamos la opacidad y transformación */
 }
 
 .section h2 {
@@ -230,13 +219,6 @@ nav a:hover {
   display: flex;
   flex-direction: column;
   gap: 30px;
-}
-
-@media (min-width: 768px) {
-  .contact-container {
-    flex-direction: row;
-    gap: 30px;
-  }
 }
 
 .contact-form {
@@ -318,7 +300,49 @@ footer {
   font-size: 0.9rem;
 }
 
+/* ✅ Responsive Design - Móviles */
 @media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    gap: 15px;
+    padding: 15px 5%;
+  }
+
+  nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  nav a {
+    padding: 8px 12px;
+    font-size: 0.9rem;
+    text-align: center;
+  }
+
+  .hero {
+    height: auto;
+    padding: 40px 5%;
+  }
+
+  .hero-content h1 {
+    font-size: 2rem;
+    line-height: 1.3;
+    padding: 0 15px;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+    padding: 0 15px;
+  }
+
+  .btn {
+    width: 85%;
+    padding: 14px;
+    font-size: 1.1rem;
+    margin: 10px auto;
+  }
+
   .section {
     padding: 40px 15px;
   }
@@ -341,7 +365,16 @@ footer {
 
   .contact-form input,
   .contact-form textarea {
-    padding: 12px;
-    font-size: 0.9rem;
+    padding: 14px;
+    font-size: 1rem;
+  }
+
+  .contact-form button {
+    padding: 14px;
+    font-size: 1.1rem;
+  }
+
+  .contact-info {
+    padding: 20px;
   }
 }
