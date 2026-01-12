@@ -181,6 +181,8 @@ nav a:hover {
   word-break: break-word;
   overflow-wrap: break-word;
   padding: 0 10px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .btn {
