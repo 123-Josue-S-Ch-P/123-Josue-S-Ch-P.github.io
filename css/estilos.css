@@ -41,13 +41,13 @@ body::before {
   background-size: 100px 100px;
 
   /* Animación de parpadeo y movimiento lento */
-  animation: twinkle 10s linear infinite;
+  animation: twinkle 3s linear infinite;
 }
 
 @keyframes twinkle {
   0% { opacity: 0.5; transform: translateY(0); }
-  50% { opacity: 1; transform: translateY(-2px); }
-  100% { opacity: 0.5; transform: translateY(0); }
+  50% { opacity: 7; transform: translateY(-2px); }
+  100% { opacity: 0.10; transform: translateY(0); }
 }
 
 /* Opcional: añadir una nebulosa suave en el fondo */
@@ -89,12 +89,12 @@ body::after {
   background-size: 500px 500px;
   opacity: 0.3;
   z-index: -1;
-  animation: twinkle 8s ease-in-out infinite alternate;
+  animation: twinkle 5s ease-in-out infinite alternate;
 }
 
 @keyframes twinkle {
   0% { opacity: 0.1; }
-  100% { opacity: 0.4; }
+  100% { opacity: 0.7; }
 }
 
 /* Header */
