@@ -5,18 +5,60 @@
   box-sizing: border-box;
 }
 
-/* Fondo con gradiente futurista + estrellas */
+/* Fondo negro profundo */
 body {
-  background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
-  background-size: 400% 400%;
-  animation: gradientBG 20s ease infinite;
-  font-family: 'Poppins', sans-serif;
-  color: white;
-  line-height: 1.6;
-  padding: 0;
-  min-height: 100vh;
-  position: relative;
-  overflow-x: hidden;
+  background: #000;
+color: white;
+font-family: 'Poppins', sans-serif;
+line-height: 1.6;
+padding: 0;
+min-height: 100vh;
+}
+
+/* Estrellas flotantes */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+
+  /* Genera estrellas con gradientes radiales */
+  background-image:
+    radial-gradient(circle at 20% 30%, rgba(255,255,255,0.8) 1px, transparent 1px),
+    radial-gradient(circle at 80% 70%, rgba(255,255,255,0.6) 1px, transparent 1px),
+    radial-gradient(circle at 40% 60%, rgba(255,255,255,0.4) 1px, transparent 1px),
+    radial-gradient(circle at 60% 40%, rgba(255,255,255,0.3) 1px, transparent 1px),
+    radial-gradient(circle at 10% 90%, rgba(255,255,255,0.5) 1px, transparent 1px),
+    radial-gradient(circle at 90% 10%, rgba(255,255,255,0.7) 1px, transparent 1px),
+    radial-gradient(circle at 50% 50%, rgba(255,255,255,0.2) 1px, transparent 1px);
+
+  /* Repite las estrellas en todo el fondo */
+  background-size: 100px 100px;
+
+  /* Animación de parpadeo y movimiento lento */
+  animation: twinkle 10s linear infinite;
+}
+
+@keyframes twinkle {
+  0% { opacity: 0.5; transform: translateY(0); }
+  50% { opacity: 1; transform: translateY(-2px); }
+  100% { opacity: 0.5; transform: translateY(0); }
+}
+
+/* Opcional: añadir una nebulosa suave en el fondo */
+body::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+  background: radial-gradient(circle at 50% 50%, rgba(30, 0, 50, 0.1) 0%, transparent 50%);
+  opacity: 0.3;
 }
 
 @keyframes gradientBG {
@@ -70,7 +112,7 @@ header {
 .logo {
   font-size: 1.8rem;
   font-weight: 700;
-  color: #00ffaa;
+  color: #ffffff;
   text-shadow: 0 0 10px #00ffaa;
   letter-spacing: 1px;
 }
@@ -82,7 +124,7 @@ nav ul {
 }
 
 nav a {
-  color: white;
+  color: rgb(238, 243, 237);
   text-decoration: none;
   padding: 8px 15px;
   border-radius: 4px;
@@ -91,9 +133,9 @@ nav a {
 }
 
 nav a:hover {
-  background: rgba(0,255,170,0.2);
-  color: #00ffaa;
-  box-shadow: 0 0 15px rgba(0,255,170,0.5);
+  background: rgb(53, 255, 211);
+  color: #000000;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.863);
 }
 
 /* Hero Section */
@@ -142,19 +184,19 @@ nav a:hover {
 .btn {
   display: inline-block;
   padding: 12px 24px;
-  background: linear-gradient(45deg, #00ffaa, #00cc88);
+  background: linear-gradient(45deg, #00ffaa, #c1ffea);
   color: #121212;
   text-decoration: none;
   border-radius: 30px;
   font-weight: 600;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(0,255,170,0.3);
+  box-shadow: 0 4px 15px rgba(235, 237, 238, 0.692);
 }
 
 .btn:hover {
   transform: translateY(-3px);
-  box-shadow: 0 6px 20px rgba(0,255,170,0.5);
-  background: linear-gradient(45deg, #00cc88, #009966);
+  box-shadow: 0 6px 20px rgba(255, 255, 255, 0.5);
+  background: linear-gradient(45deg, #b3ffe1, #c5ffeb);
 }
 
 /* Secciones generales */
@@ -277,7 +319,7 @@ nav a:hover {
 }
 
 .contact-info h3 {
-  color: #00ffaa;
+  color: #ebebf0;
   margin-bottom: 20px;
   font-size: 1.5rem;
 }
