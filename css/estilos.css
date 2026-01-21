@@ -436,3 +436,29 @@ footer {
   text-align: center;
   margin: 20px 0;
 }
+
+.contact-info h3 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #ffffff;
+  text-shadow: 0 0 10px #00ffaa;
+  letter-spacing: 1px;
+}
+
+/* WhatsApp*/
+.social-icon {
+  display: inline-block;
+  font-size: 2rem;
+  color: #25D366;
+  transition: transform 0.3s ease;
+}
+.social-icon:hover {
+  transform: scale(1.2);
+}
+.contact-item {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #00ffaa;
+  text-shadow: 0 0 10px #00ffaa;
+  text-align: center;
+}
