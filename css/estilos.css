@@ -185,7 +185,7 @@ nav a:hover {
   margin-right: auto;
 }
 
-.btn {
+.btn-1 {
   display: inline-block;
   padding: 12px 24px;
   background: linear-gradient(45deg, #00ffaa, #c1ffea);
@@ -197,7 +197,7 @@ nav a:hover {
   box-shadow: 0 4px 15px rgba(235, 237, 238, 0.692);
 }
 
-.btn:hover {
+.btn-1:hover {
   transform: translateY(-3px);
   box-shadow: 0 6px 20px rgba(255, 255, 255, 0.5);
   background: linear-gradient(45deg, #b3ffe1, #c5ffeb);
@@ -461,4 +461,60 @@ footer {
   color: #00ffaa;
   text-shadow: 0 0 10px #00ffaa;
   text-align: center;
+}
+
+/* habilidades --------------------------*/
+.carousel {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.container {
+  width: 80vw;        /* ~mitad de pantalla */
+  max-width: 600px;
+  height: 300px;
+  overflow: hidden;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.track {
+  display: flex;
+  height: 100%;
+  width: 100%; 
+  transition: transform 0.4s ease;
+}
+
+.track img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  flex: 0 0 100%; 
+}
+
+/* Flechas (discretas) */
+.btn {
+  background: rgba(0, 0, 0, 0.4);
+  color: rgba(255, 255, 255, 0.7);
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(4px);
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background: rgba(0, 255, 170, 0.2);
+  color: #00ffaa;
 }
