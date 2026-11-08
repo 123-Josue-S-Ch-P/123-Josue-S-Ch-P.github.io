@@ -3,119 +3,319 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Portafolio - Josue Choque, Soy estudiante de Ingeniería de Sistemas en El Alto, Bolivia. Soporte técnico TI, desarrollo web y redes.">
   <title>Josue S. Choque Parisaca - Portafolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/estilos.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 <body>
-  <!-- Header -->
+
+  <!-- logo, botón ☰ y menú -->
   <header>
-    <div class="logo">JOSUE S. CHOQUE P.</div>
+    <a href="#inicio" class="logo">Josue Choque Parisaca</a>
+
+    <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false">
+      <i class="fas fa-bars"></i>
+    </button>
+
     <nav>
       <ul>
         <li><a href="#sobre-mi">Sobre Mí</a></li>
+        <li><a href="#experiencia">Experiencia</a></li>
         <li><a href="#habilidades">Habilidades</a></li>
-        <li><a href="#aprendiendo">Estoy Aprendiendo</a></li>
+        <li><a href="#aprendiendo">Formación</a></li>
+        <li><a href="#proyectos">Proyectos</a></li>
         <li><a href="#contacto">Contacto</a></li>
       </ul>
     </nav>
   </header>
 
-  <!-- principal -->
-  <section class="hero">
+  <section class="hero" id="inicio">
     <div class="hero-content">
-      <h1>BIENVENIDO A MI PERFIL DIGITAL.</h1>
-      <h1>Explora, descarga mi CV y contacta si algo resuena contigo.</h1>
-      <p>Estudiante de Ingenieria De Sistemas, apasionado por la tecnología experiencias digitales únicas.</p>
-      <a href="#contacto" class="btn-1">Hablemos</a>
+      <center><h1>BIENVENIDO A MI PERFIL DIGITAL</h1></center>
+      <p class="etiqueta">Estudiante de Ingeniería de Sistemas - El Alto, Bolivia</p>
+      <h1>Soporte técnico, <span class="resaltado">desarrollo web</span> y redes.</h1>
+      <p class="hero-texto">
+        Estudiante de último año de Ingeniería de Sistemas con 380 horas de pasantía en Mi Teleférico. 
+        Busco una oportunidad de trabajo o prácticas en soporte TI donde pueda aportar mis conocimientos 
+        desde el primer día y continuar mi desarrollo profesional.
+      </p>
+      <div class="hero-botones">
+        <a href="pdf/Hoja_de_vida_Josue_S_Choque_Parisaca.pdf" download class="btn-1">
+          <i class="fas fa-download"></i> Descargar CV
+        </a>
+        <a href="#contacto" class="btn-2">Contáctame</a>
+      </div>
     </div>
+
+    <!-- Tarjeta de mis datos -->
+    <aside class="hero-card">
+      <p class="estado"><span class="punto"></span> Disponible para pasantía o empleo</p>
+      <dl>
+        <dt>Carrera</dt>
+        <dd>Ingeniería de Sistemas, UPEA · 2022–2026 (En curso) </dd>
+        <dt>Áreas</dt>
+        <dd> · Soporte y hardware </dd>
+        <dd> · Desarrollo web</dd>
+        <dd> · Redes </dd>
+        <dt>Idiomas</dt>
+        <dd>Español nativo · Inglés intermedio · Aymara intermedio</dd>
+      </dl>
+    </aside>
   </section>
 
-  <!-- Sobre Mí -->
+  <!-- SOBRE MÍ -->
   <section id="sobre-mi" class="section">
-    <h2>Sobre Mí</h2>
-    <div class="content-box">
-      <p>Hola, soy Josue S. Choque Parisaca, estudiante de Ingeniería de Sistemas en la Universidad Pública de El Alto.
-         Desde que empecé esta carrera, me apasiona transformar ideas en soluciones digitales que realmente funcionen y marquen la diferencia.</p>
-      <p>Me especializo en crear aplicaciones web que no solo se vean bien, sino que sean intuitivas, rápidas y fáciles de usar.
-         Para mí, el diseño y la experiencia de usuario no son detalles al final, sino la base de cualquier buen proyecto digital.</p>
-      <p>Lo que hace único mi perfil es que combino esta pasión por el desarrollo web con una formación sólida en la parte de la tecnología:
-         redes, bases de datos, seguridad y toda la infraestructura que hace posible que todo funcione sin problemas. Esta visión integral me 
-         permite crear soluciones que no solo son visualmente atractivas, sino también robustas, eficientes y seguras desde sus cimientos.</p>
-      <p>Mi enfoque es simple: entender el problema real, pensar en la arquitectura adecuada y luego construir con código limpio y diseño cuidado.
-         Creo que la mejor tecnología es la que soluciona sin complicar, y eso es lo que busco en cada proyecto.</p>
-      <div class="descargar-cv">
-        <a href="pdf/Hoja_de_vida_Josue_S_Choque_Parisaca.pdf" download class="btn-1">Descargar CV</a>
+    <p class="etiqueta">Sobre mí</p>
+    <h2>Quién soy y qué busco</h2>
+    <div class="content-box sobre-mi-caja">
+      <div class="avatar">
+        <span>JC</span>
+        <img src="imagenes/josue_FOTO.jpg" alt="Foto de Josue Choque" onerror="this.style.display='none'">
+      </div>
+      <div class="sobre-mi-texto">
+        <p>
+          Soy estudiante de último año de Ingeniería de Sistemas en la Universidad Pública de El Alto. 
+          Realicé una pasantía de 380 horas en Mi Teleférico, donde trabajé con sistemas de proyección, 
+          sonido, iluminación, cableado y sistemas complementarios del PCyMT. Asimismo, brindé soporte a los usuarios, 
+          guiándolos en la instalación y registro de la aplicación 'YALA' de Mi Teleférico.
+        </p>
+        <p>
+          Me interesan el soporte técnico, el desarrollo web y las redes. Me gusta entender bien el
+          problema antes de resolverlo y dejar las cosas funcionando de forma ordenada.
+          Busco trabajo o pasatias donde pueda aportar mis conocimietos y continuar mi desarrollo profesional.
+        </p>
+        <div class="descargar-cv">
+          <a href="pdf/Hoja_de_vida_Josue_S_Choque_Parisaca.pdf" download class="btn-1">
+            <i class="fas fa-download"></i> Descargar CV
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Números animados (data-contador = número final, data-sufijo = texto después) -->
+    <div class="stats">
+      <div class="stat"><strong data-contador="380" data-sufijo=" h">380 h</strong><span>de pasantía en Mi Teleférico</span></div>
+      <div class="stat"><strong data-contador="6">6</strong><span>cursos y capacitaciones</span></div>
+      <div class="stat"><strong data-contador="4" data-sufijo=" años">4 años</strong><span>de estudio en la carrera</span></div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCIA  -->
+  <section id="experiencia" class="section">
+    <p class="etiqueta">Experiencia</p>
+    <h2>Dónde he trabajado</h2>
+
+    <!-- Tarjeta de la pasantía (para otro trabajo, copia el <article>) -->
+    <article class="experiencia-card">
+      <div class="experiencia-datos">
+        <h3>Pasante</h3>
+        <p class="empresa">Empresa Estatal Mi Teleférico</p>
+        <p class="fechas">16 mar – 2 jul 2026 · 380 horas</p>
+        <p class="area">Gerencia de Negocios y Tecnología, Depto. de Comercialización, Marketing y Negocios
+                       (Área Parque de las Culturas y la Madre Tierra)</p>
+      </div>
+      <ul class="experiencia-lista">
+        <li>Apoyo en la revisión del funcionamiento electrónico y de telecomunicaciones de los sistemas complementarios del PCyMT.</li>
+        <li>Apoyo en la instalación y mantenimiento de equipos de proyección, sonido, iluminación y microfonía del Teatro Galpón y Escenario Principal del PCyMT.</li>
+        <li>Colaboración en activaciones y campañas promocionales para las estrategias de mercadeo.</li>
+        <li>Apoyo en el servicio de atención al usuario del PCyMT, fortaleciendo la calidad del servicio y la experiencia del visitante.</li>
+      </ul>
+    </article>
+
+    <h3 class="subtitulo">Fotos de mi pasantía</h3>
+
+    <!-- ⚠ CAMBIA AQUÍ: estas 3 imágenes son de EJEMPLO.
+         Reemplaza el src por tus fotos (ej: imagenes/pasantia-1.jpg) y el alt por lo que se ve.
+         El alt se muestra como título debajo de la foto. Pide permiso a la empresa antes de publicar. -->
+    <div class="carousel">
+      <button class="btn prev" aria-label="Imagen anterior">←</button>
+      <div class="container">
+        <div class="track">
+          <img src="foto1" alt="Foto de la pasantía 1">
+          <img src="foto2" alt="Foto de la pasantía 2">
+          <img src="foto3" alt="Foto de la pasantía 3">
+        </div>
+      </div>
+      <button class="btn next" aria-label="Imagen siguiente">→</button>
+    </div>
+  </section>
+
+  <!-- HABILIDADES: iconos de tecnologías + tarjetas por categoría -->
+  <section id="habilidades" class="section">
+    <p class="etiqueta">Habilidades</p>
+    <h2>Lo que sé hacer</h2>
+
+    <!-- Iconos de tecnologías (para agregar uno, copia un <div class="tech"> y cambia el icono y el nombre) -->
+    <div class="tech-grid">
+      <div class="tech"><i class="fas fa-microchip"></i><span>Ensamblaje de PC</span></div>
+      <div class="tech"><i class="fas fa-gamepad"></i><span>Godot</span></div>
+      <div class="tech"><i class="fab fa-git-alt"></i><span>Git</span></div>
+      <div class="tech"><i class="fab fa-html5"></i><span>HTML</span></div>
+      <div class="tech"><i class="fab fa-css3-alt"></i><span>CSS</span></div>
+      <div class="tech"><i class="fab fa-js"></i><span>JavaScript</span></div>
+      <div class="tech"><i class="fab fa-python"></i><span>Python</span></div>
+      <div class="tech"><i class="fab fa-java"></i><span>Java</span></div>
+      <div class="tech"><i class="fas fa-database"></i><span>MySQL</span></div>
+      <div class="tech"><i class="fas fa-server"></i><span>PostgreSQL</span></div>
+      <div class="tech"><i class="fab fa-linux"></i><span>Kali Linux</span></div>
+      <div class="tech"><i class="fas fa-network-wired"></i><span>Fibra óptica</span></div>
+    </div>
+
+    <!-- Tarjetas por categoría (para agregar una, copia un <span class="chip">) -->
+    <div class="skills-grid">
+      <div class="skill-card">
+        <h3>Soporte y hardware</h3>
+        <div class="chips">
+          <span class="chip">Ensamblaje de PC</span>
+          <span class="chip">Reparación</span>
+          <span class="chip">Mantenimiento de equipos</span>
+          <span class="chip">Cableado</span>
+        </div>
+      </div>
+
+      <div class="skill-card">
+        <h3>Programación</h3>
+        <div class="chips">
+          <span class="chip">HTML</span>
+          <span class="chip">CSS</span>
+          <span class="chip">JavaScript</span>
+          <span class="chip">Python</span>
+          <span class="chip">Java</span>
+        </div>
+      </div>
+
+      <div class="skill-card">
+        <h3>Redes</h3>
+        <div class="chips">
+          <span class="chip">Fibra óptica</span>
+          <span class="chip">Telecomunicaciones</span>
+        </div>
+      </div>
+
+      <div class="skill-card">
+        <h3>Bases de datos</h3>
+        <div class="chips">
+          <span class="chip">MySQL</span>
+          <span class="chip">PostgreSQL</span>
+        </div>
+      </div>
+
+      <div class="skill-card">
+        <h3>Herramientas</h3>
+        <div class="chips">
+          <span class="chip">Git</span>
+          <span class="chip">Kali Linux</span>
+          <span class="chip">Godot</span>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Habilidades -->
-<section id="habilidades" class="section">
-  <h2>Habilidades</h2>
-  <div class="carousel">
-    <button class="btn prev">←</button>
-    <div class="container">
-      <div class="track">
-        <img src="imagenes/html.jpg" alt="HTML5">
-        <img src="imagenes/css.jpg" alt="CSS3">
-        <img src="imagenes/javascript.jpg" alt="JavaScript">
-        <img src="imagenes/python.jpg" alt="Python">
-        <img src="imagenes/github.jpg" alt="Git">
-        <img src="imagenes/sql.jpg" alt="SQL">
-      </div>
-    </div>
-    <button class="btn next">→</button>
-  </div>
-</section>
 
-<!-- Estoy Aprendiendo -->
-<section id="aprendiendo" class="section">
-  <h2>Estoy Aprendiendo</h2>
-  <div class="carousel">
-    <button class="btn prev">←</button>
-    <div class="container">
-      <div class="track">
-        <img src="imagenes/fibraoptica.jpg" alt="Redes de fibra optica">
-        <img src="imagenes/godot.jpg" alt="desarrollo videojugos goodot">
-        <img src="imagenes/hacking.png" alt="Etical hacking">
-      </div>
-    </div>
-    <button class="btn next">→</button>
-  </div>
-</section>
-
-  <!-- Contacto -->
-  <section id="contacto" class="section">
-    <h2>¿Quieres trabajar conmigo?</h2>
-    <div class="contact-container">
-      <div class="contact-info">
-        <h3>Contacto Directo</h3>
-        <p>𝕌𝕓𝕚𝕔𝕒𝕔𝕚ó𝕟:&emsp;El Alto - La Paz, Bolivia</p>
-        <p>𝕋𝕖𝕝é𝕗𝕠𝕟𝕠:&emsp;+591 75883027</p>
-        <p>ℂ𝕠𝕣𝕣𝕖𝕠:&emsp;choquejosue50@gmail.com</p>
-          <div class="contact-item">
-          <h3>Escribeme en:</h3>
-            <div class="social-icons">
-            <a href="https://wa.me/59175883027?text=Hola%2C%20te%20escribo%20desde%20tu%20portafolio" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                class="social-icon">
-            <i class="fab fa-whatsapp"></i>
-            </a>
-            </div>
-          </div>
-      </div>
-    </div>
+  <!-- FORMACIÓN Y CURSOS  -->
+  <section id="aprendiendo" class="section">
+    <p class="etiqueta">Formación y cursos</p>
+    <h2>Estudios y capacitaciones</h2>
     
+    <div class="cursos">
+      <div class="curso">
+        <span class="curso-fecha">2022 – 2026</span>
+        <div><strong>Ingeniería de Sistemas</strong><small>Universidad Pública de El Alto - Último año (En curso)</small></div>
+      </div>
+      <div class="curso">
+        <span class="curso-fecha">Sep – Oct 2026</span>
+        <div><strong>Ensamblaje y reparación de computadoras</strong><small>CIE – Cesbol Ingeniería · 40 horas</small></div>
+      </div>
+    </div>
+    <div class="cursos">
+      <div class="curso">
+        <span class="curso-fecha">Jul 2026</span>
+        <div><strong>Programación con JavaScript</strong><small>Universidad Pública de El Alto · 60 horas</small></div>
+      </div>
+      <div class="curso">
+        <span class="curso-fecha">Abr 2026</span>
+        <div><strong>Ley SAFCO 1178</strong><small>Universidad Pública de El Alto · 60 horas</small></div>
+      </div>
+      <div class="curso">
+        <span class="curso-fecha">Jul 2025</span>
+        <div><strong>Ethical Hacking</strong><small>Universidad Pública de El Alto · 40 horas</small></div>
+      </div>
+      <div class="curso">
+        <span class="curso-fecha">Jun 2025</span>
+        <div><strong>Desarrollo de videojuegos con Godot</strong><small>Universidad Pública de El Alto · 60 horas</small></div>
+      </div>
+      <div class="curso">
+        <span class="curso-fecha">May 2025</span>
+        <div><strong>Redes de fibra óptica</strong><small>Universidad Pública de El Alto · 40 horas</small></div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- PROYECTOS -->
+  <section id="proyectos" class="section">
+    <p class="etiqueta">Proyectos</p>
+    <h2>Lo que he construido</h2>
+
+    <div class="proyectos-grid">
+      <article class="proyecto-card">
+        <!-- CAMBIA AQUÍ: guarda una captura de tu página como imagenes/proyecto-portafolio.jpg (si no existe, no se muestra) -->
+        <img class="proyecto-img" src="imagenes/proyecto-portafolio.jpg" alt="Captura del portafolio web" onerror="this.style.display='none'">
+        <h3>Portafolio web personal</h3>
+        <p>Sitio publicado en GitHub Pages con mi perfil, experiencia, formación y contacto.</p>
+        <div class="chips">
+          <span class="chip">HTML</span>
+          <span class="chip">CSS</span>
+          <span class="chip">JavaScript</span>
+          <span class="chip">GitHub Pages</span>
+        </div>
+        <a href="https://123-josue-s-ch-p.github.io" class="enlace-flecha">Ver sitio →</a>
+      </article>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section id="contacto" class="section">
+    <p class="etiqueta">Contacto</p>
+    <h2>¿Tienes una oportunidad o una pregunta? Escríbeme.</h2>
+
+    <div class="contact-container">
+      <!-- Datos de contacto con iconos -->
+      <div class="contact-info">
+        <h3>Contacto directo</h3>
+        <p><i class="fas fa-location-dot"></i> El Alto - La Paz, Bolivia</p>
+        <p><i class="fas fa-phone"></i> +591 75883027</p>
+        <p><i class="fas fa-envelope"></i> choquejosue50@gmail.com</p>
+      </div>
+
+      <!-- Botones para escribirme -->
+      <div class="contact-item">
+        <h3>Escríbeme por:</h3>
+        <div class="social-icons">
+          <!-- WhatsApp  -->
+          <a href="https://wa.me/59175883027?text=Hola%2C%20te%20escribo%20desde%20tu%20portafolio"
+             target="_blank"
+             rel="noopener noreferrer"
+             class="social-icon whatsapp">
+            <i class="fab fa-whatsapp"></i> WhatsApp
+          </a>
+
+          <a href="mailto:choquejosue50@gmail.com" class="social-icon">
+            <i class="fas fa-envelope"></i> Correo
+          </a>
+        </div>
+      </div>
+    </div>
   </section>
 
   <!-- pie de pagina -->
   <footer>
-    <p>© Josue Sergio Choque Parisaca 2026. Todos los Derechos Reservados.</p>
+    <p>© 2026 Josue Sergio Choque Parisaca</p>
   </footer>
-  <!-- JavaScript al final -->
+
+  <!-- JavaScript: carrusel, menú del celular y animaciones (sin cambios) -->
   <script src="js/carousel.js"></script>
 </body>
 </html>
